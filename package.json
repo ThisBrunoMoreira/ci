@@ -19,7 +19,9 @@
     "test:cov": "jest  --coverage --runInBand ",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "npx dotenv-cli -e .env.test  -- jest --runInBand --config ./jest.e2e.config.ts",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test:ci": "npx dotenv-cli -e .env.exemple  -- jest --runInBand",
+    "start:ci": "npx dotenv-cli -e .env.exemple -- node dist/src/main"
   },
   "dependencies": {
     "@fastify/static": "^6.10.2",

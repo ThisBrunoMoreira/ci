@@ -1,0 +1,10 @@
+docker/
+node_modules/
+.devcontainer/
+.git/
+docker/
+docker-compose.yaml
+Dockerfile.dev
+Dockerfile.prod
+.vscode/
+README.md

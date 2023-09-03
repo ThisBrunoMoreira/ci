@@ -20,6 +20,8 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "npx dotenv-cli -e .env.test  -- jest --runInBand --config ./jest.e2e.config.ts",
     "prepare": "husky install",
+    "prisma:migrate": "npx  dotenv-cli  -e .env.exemple -- npx  prisma migrate deploy  -- schema ./src/shared/infrastructure/database/prisma/schema.prisma",
+    "prisma": "npx prisma generate --schema ./src/shared/infrastructure/database/prisma/schema.prisma",
     "test:ci": "npx dotenv-cli -e .env.exemple  -- jest --runInBand",
     "start:ci": "npx dotenv-cli -e .env.exemple -- node dist/src/main"
   },
